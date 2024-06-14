@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Kumar Yadav - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin: 0;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            animation: fadeInRight 1s ease-in-out;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Section Styles */
+        section {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+
+        ul.skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #1a1a1a;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li i {
+            margin-right: 10px;
+            color: #1a1a1a;
+        }
+
+        .education-item, .experience-item, .achievement-item, .activity-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h3, .experience-item h3, .achievement-item h3, .activity-item h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.5em;
+        }
+
+        .education-item p, .experience-item p, .achievement-item p, .activity-item p {
+            margin: 5px 0 0 0;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #f39c12;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+        }
+
+        .contact-form button:hover {
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Vishal Kumar Yadav</h1>
+                <p>B.Tech. | NIT Rourkela | Industrial Design</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#extracurricular">Activities</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p><strong>DOB:</strong> 04 July 2003</p>
+        <p><strong>Phone:</strong> +91 6204820578</p>
+        <p><strong>Email:</strong> <a href="mailto:vishxlkr@gmail.com">vishxlkr@gmail.com</a></p>
+        <h3>Hire Me</h3>
+        <form class="contact-form" action="mailto:vishxlkr@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>B.Tech., Industrial Design - NIT Rourkela (2022‐2026)</h3>
+            <p>CGPA: 7.5/10</p>
+        </div>
+        <div class="education-item">
+            <h3>Intermediate - Yogiraj Public School, Kota, Rajasthan (May 2021)</h3>
+            <p>Percentage: 82.4%</p>
+        </div>
+        <div class="education-item">
+            <h3>Matriculation - DAV Public School, Kathara (May 2019)</h3>
+            <p>Percentage: 88.4%</p>
+        </div>
+    </section>
+    
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="fas fa-code"></i><strong>Programming:</strong> C, C++, Python, HTML, CSS, JavaScript</li>
+            <li><i class="fab fa-react"></i><strong>Frameworks:</strong> React, Node, Express</li>
+            <li><i class="fas fa-tools"></i><strong>Tools:</strong> git/github</li>
+            <li><i class="fas fa-language"></i><strong>
